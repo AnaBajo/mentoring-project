@@ -1,9 +1,10 @@
 <template>
-  <Tutorial />
+  <div>
+    <nuxt-link to="/contact" >
+      <clock-component />
+      <custom-button text="Contact" />
+    </nuxt-link>
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage',
-}
-</script>
+
