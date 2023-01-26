@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <b-button variant="primary" size="lg" class="m-5">{{ text }}</b-button>
+    <b-button @click="incrementValue()" variant="primary" size="lg" class="m-5">{{ text }}</b-button>
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
       required: true,
       default: "button text"
     }
+  },
+  methods: {
+    incrementValue() {
+      this.$nuxt.$emit('clicked', this.inputValue)
+      console.log(this.inputValue)
+    },
   }
 }
 </script>
