@@ -14,16 +14,16 @@ export default {
       default: "placeholder text"
     }
   },
-  data(){
-    return {
-      value: 0
-    }
-  },
-  mounted() {
-    this.$nuxt.$on('clicked', (data) => {
-      this.value++
-    })
-  }
+  // data(){
+  //   return {
+  //     value: 0
+  //   }
+  // },
+  // mounted() {
+  //   this.$nuxt.$on('clicked', (data) => {
+  //     this.value++
+  //   })
+  // }
 }
 </script>
 
