@@ -1,6 +1,12 @@
 <template>
   <div>
-    <b-form-input :value="value" type="text" class="justify-content-center" :placeholder="placeholderValue" />
+    <b-form-input :value="inputValue" type="text" class="justify-content-center" :placeholder="placeholderValue" v-model="inputValue"  />
+    <!-- <b-form-input :value="inputValue" type="text" class="justify-content-center" :placeholder="placeholderValue" @keypress.native="collectInputValue"  /> -->
+    <select name="" id="" v-model="selectValue">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
   </div>
 </template>
 
@@ -16,10 +22,21 @@ export default {
   },
   data(){
     return {
-      value: 0 
+      inputValue: 0,
+      selectValue: ''
     }
   },
-
+  created() {
+    this.$nuxt.$on('emitted-event', () => {
+      console.log(this.inputValue);
+      console.log(this.selectValue);
+    })
+  },
+  methods: {
+    collectInputValue(Event) {
+      this.inputValue = Event.target.value
+    },
+  }
 }
 </script>
 

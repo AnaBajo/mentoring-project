@@ -7,6 +7,7 @@
       </div>
       <p class="w-100">{{ keystroke }}</p>
     <nuxt-link to="/contact" >
+    <nuxt-link to="/nicolascage">Nicolas Cage</nuxt-link>
       <!-- <clock-component /> -->
       <custom-button text="Contact" />
     </nuxt-link>
