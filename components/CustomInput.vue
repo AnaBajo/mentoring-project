@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form-input :value="value" type="text" class="justify-content-center" :placeholder="placeholderValue"/>
+    <b-form-input :value="value" type="text" class="justify-content-center" :placeholder="placeholderValue" />
   </div>
 </template>
 
@@ -14,16 +14,12 @@ export default {
       default: "placeholder text"
     }
   },
-  // data(){
-  //   return {
-  //     value: 0
-  //   }
-  // },
-  // mounted() {
-  //   this.$nuxt.$on('clicked', (data) => {
-  //     this.value++
-  //   })
-  // }
+  data(){
+    return {
+      value: 0 
+    }
+  },
+
 }
 </script>
 
